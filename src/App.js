@@ -49,7 +49,7 @@ function App() {
     Object.keys(prInfoRes[getPrevDateStart]).forEach(function (idx) {
       res[idx] -= prInfoRes[getPrevDateStart][idx];
     });
-    if (getPrevDateEnd == getPrevDateStart) setData2(null);
+    if (getPrevDateEnd === getPrevDateStart) setData2(null);
     else setPercentageData(res);
   };
 

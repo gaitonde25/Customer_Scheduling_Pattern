@@ -83,7 +83,7 @@ const getSlot = (time) => {
 const ProcessSchData = () => {
   let itmRes = {};
   let schRes = {};
-  data.map((ele, idx) => {
+  data = data.map((ele, idx) => {
     let schDate = ele.schedule_time.split(" ")[0];
     let schTime = ele.schedule_time.split(" ")[1];
     // first
@@ -101,6 +101,7 @@ const ProcessSchData = () => {
       schRes[schDate] = [0, 0, 0, 0];
     }
     schRes[schDate][getSlot(schTime)]++;
+    return ele;
   });
   return {
     itemRes: retItemData(itmRes, 1),

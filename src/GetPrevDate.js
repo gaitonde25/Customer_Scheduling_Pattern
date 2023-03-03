@@ -2,8 +2,9 @@ import data from "./data";
 const GetPrevDate = (date, isSmall) => {
   let keys = [];
   let obj = {};
-  data.map((ele, idx) => {
+  data = data.map((ele, idx) => {
     obj[ele.item_date] = 1;
+    return ele;
   });
   Object.keys(obj).forEach(function (idx) {
     keys.push(idx);
